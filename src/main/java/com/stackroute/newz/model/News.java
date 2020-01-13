@@ -2,6 +2,13 @@ package com.stackroute.newz.model;
 
 import java.time.LocalDateTime;
 
+/* 
+ * Annotate the class with @Component annotation. 
+ * @Component annotation is used to crete singleton instance of of the class
+ *
+ */
+
+
 /*
  * The class "News" will be acting as the data model for the News data in the ArrayList.
  */
