@@ -4,7 +4,9 @@ import java.util.List;
 
 import com.stackroute.newz.model.News;
 
+
 /*
+ * Annotate the class with @Repository annotation. 
  * This class contains the code for data storage interactions and methods 
  * of this class will be used by other parts of the applications such
  * as Controllers and Test Cases
