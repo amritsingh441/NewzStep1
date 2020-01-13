@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 
 /* 
  * Annotate the class with @Controller annotation. @Controller annotation is used to mark 
- * any POJO class as a controller so that Spring can recognize this class as a Controller 
+ * any java class as a controller so that Spring can recognize this class as a Controller 
  */
 
 public class NewsController {
