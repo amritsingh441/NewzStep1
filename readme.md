@@ -111,23 +111,21 @@ The folders and files you see in this repositories, is how it is expected to be 
 
      `git remote add origin <CADET-REPO>`
 
-     **Note: {{yourusername}} should be replaced by your username from gitlab**
-
-5. Check the status of your repo 
+6. Check the status of your repo 
      
      `git status`
 
-6. Use the following command to update the index using the current content found in the working tree, to prepare the content staged for the next commit.
+7. Use the following command to update the index using the current content found in the working tree, to prepare the content staged for the next commit.
 
      `git add .`
  
-7. Commit and Push the project to git
+8. Commit and Push the project to git
 
      `git commit -a -m "Initial commit | or place your comments according to your need"`
 
      `git push -u origin master`
 
-8. Check on the git repo online, if the files have been pushed
+9. Check on the git repo online, if the files have been pushed
 
 ### Important instructions for Participants
 > - We expect you to write the assignment on your own by following through the guidelines, learning plan, and the practice exercises
