@@ -1,12 +1,11 @@
 package com.stackroute.newz.controller;
 
-import java.time.LocalDateTime;
+
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -38,9 +37,8 @@ public class NewsController {
 	 */
 	ApplicationContext appCtx = new ClassPathXmlApplicationContext("beans.xml");
 	News newsObj = appCtx.getBean("news",News.class);
-	NewsRepository newsRepository = appCtx.getBean("newsRepository",NewsRepository.class);
-
-	NewsRepository newsRepo=new NewsRepository();
+	NewsRepository newsRepo = appCtx.getBean("newsRepository",NewsRepository.class);
+	
 	/*Define a handler method to read the existing news by calling the getNewsList() method 
 	 * of the NewsRepository class and add it to the ModelMap which is an implementation of Map 
 	 * for use when building model data for use with views. it should map to the default URL i.e. "/" */
@@ -58,11 +56,11 @@ public class NewsController {
 	 * This handler method should map to the URL "/saveNews". 
 	 */
 	@PostMapping("/saveNews")
-	public String addNews(@ModelAttribute("news") News news, Model mp) {
-		newsRepo.addNews(news);
+	public String addNews(@ModelAttribute("news") News news, ModelMap mp) {
+			newsRepo.addNews(news);
 		List<News> newsList= newsRepo.getAllNews();
 		mp.addAttribute("newsList", newsList);
-		return "redirect:"+"/";
+		return "redirect:"+"/";	
 	}
 
 	/* Define a handler method to delete an existing news by calling the deleteNews() method 

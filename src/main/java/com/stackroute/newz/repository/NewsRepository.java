@@ -45,7 +45,7 @@ public class NewsRepository {
 	 * This method should News object as argument and add the new news object into
 	 * list
 	 */
-    public  void addNews(News news) {
+    public void addNews(News news) {
     	news.setPublishedAt(LocalDateTime.now());
     	newsList.add(news); 
     	
