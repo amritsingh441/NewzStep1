@@ -38,7 +38,7 @@ public class NewsController {
 	ApplicationContext appCtx = new ClassPathXmlApplicationContext("beans.xml");
 	News newsObj = appCtx.getBean("news",News.class);
 	NewsRepository newsRepo = appCtx.getBean("newsRepository",NewsRepository.class);
-	
+
 	/*Define a handler method to read the existing news by calling the getNewsList() method 
 	 * of the NewsRepository class and add it to the ModelMap which is an implementation of Map 
 	 * for use when building model data for use with views. it should map to the default URL i.e. "/" */
@@ -57,9 +57,8 @@ public class NewsController {
 	 */
 	@PostMapping("/saveNews")
 	public String addNews(@ModelAttribute("news") News news, ModelMap mp) {
-			newsRepo.addNews(news);
-		List<News> newsList= newsRepo.getAllNews();
-		mp.addAttribute("newsList", newsList);
+		newsRepo.addNews(news);
+		mp.addAttribute("newsList", newsRepo.getAllNews());
 		return "redirect:"+"/";	
 	}
 
