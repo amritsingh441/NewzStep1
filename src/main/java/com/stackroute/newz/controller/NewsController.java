@@ -55,7 +55,7 @@ public class NewsController {
 	 * news elements. Hence, reading news has to be done here again.
 	 * This handler method should map to the URL "/saveNews". 
 	 */
-	@PostMapping("/saveNews")
+	@PostMapping("/saveData")
 	public String addNews(@ModelAttribute("news") News news, ModelMap mp) {
 		newsRepo.addNews(news);
 		mp.addAttribute("newsList", newsRepo.getAllNews());

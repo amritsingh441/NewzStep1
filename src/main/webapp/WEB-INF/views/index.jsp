@@ -18,7 +18,7 @@
 
 <h2> News Application</h2>
 
-<form  name=form method=POST action="saveNews" modelAttribute="news">
+<form  name=form method=POST action="saveData" modelAttribute="news">
  
     <div class="form-group">  
       <label class="control-label col-sm-2" for="title">News Id :</label>  
